@@ -1,5 +1,7 @@
-<!doctype html>
-<html lang="pt">
+<?php
+?>
+<!doctype php>
+<php lang="pt">
 
 <head>
   <meta charset="utf-8">
@@ -26,7 +28,7 @@
   <!--1 Navbar-->
   <nav class="navbar navbar-expand-lg navbar_topo navbar_color custom">
     <div class="container-fluid">
-      <a href="index.html"><img src="files/logo.png" height="36"></a>
+      <a href="index.php"><img src="files/logo.png" height="36"></a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,28 +38,28 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active hoverable" aria-current="page" href="Quartos.html">Quartos</a>
+            <a class="nav-link active hoverable" aria-current="page" href="Quartos.php">Quartos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hoverable" href="index.html#institucional">Institucional</a>
+            <a class="nav-link hoverable" href="index.php#institucional">Institucional</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hoverable" href="index.html#rodape">Informações</a>
+            <a class="nav-link hoverable" href="index.php#rodape">Informações</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hoverable" href="index.html#contato">Contato</a>
+            <a class="nav-link hoverable" href="index.php#contato">Contato</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle hoverable" href="#" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">Nossos serviços</a>
             <ul class="dropdown-menu navbar_color" aria-labelledby="navbarDropdownMenuLink">
               <!--<li><a class="dropdown-item" href="Eventos.html">Eventos</a></li>-->
-              <li><a class="dropdown-item" href="Restaurantes.html">Restaurantes</a></li>
+              <li><a class="dropdown-item" href="Restaurantes.php">Restaurantes</a></li>
             </ul>
           </li>
 
           <li class="nav-item nav-login">
-            <a class="nav-link hoverable" href="login.html">Entrar</a>
+            <a class="nav-link hoverable" href="login.php">Entrar</a>
           </li>
         </ul>
       </div>
@@ -97,7 +99,7 @@
           <div class="dados_quarto">
             <h5 class="nome_cidade">Solteiro Standart</h5>
             <p class="texto_quarto">Quarto básico para hóspedes desacompanhados.</p>
-            <a href="Quartos.html#quarto1" class="btn btn-primary button_quarto">Mais detalhes</a>
+            <a href="Quartos.php#quarto1" class="btn btn-primary button_quarto">Mais detalhes</a>
           </div>
         </div>
 
@@ -105,7 +107,7 @@
           <div class="dados_quarto">
             <h5 class="nome_cidade">Solteiro Master</h5>
             <p class="texto_quarto">Quarto executivo para hóspedes desacompanhados.</p>
-            <a href="Quartos.html#quarto_2" class="btn btn-primary button_quarto">Mais detalhes</a>
+            <a href="Quartos.php#quarto_2" class="btn btn-primary button_quarto">Mais detalhes</a>
           </div>
         </div>
 
@@ -113,7 +115,7 @@
           <div class="dados_quarto">
             <h5 class="nome_cidade">Solteiro Deluxe</h5>
             <p class="texto_quarto">Quarto de luxo para hóspedes desacompanhados.</p>
-            <a href="Quartos.html#quarto_3" class="btn btn-primary button_quarto">Mais detalhes</a>
+            <a href="Quartos.php#quarto_3" class="btn btn-primary button_quarto">Mais detalhes</a>
           </div>
         </div>
 
@@ -121,7 +123,7 @@
           <div class="dados_quarto">
             <h5 class="nome_cidade">Casal Standard</h5>
             <p class="texto_quarto">Quarto básico para um casal de hóspedes.</p>
-            <a href="Quartos.html#quarto_4" class="btn btn-primary button_quarto">Mais detalhes</a>
+            <a href="Quartos.php#quarto_4" class="btn btn-primary button_quarto">Mais detalhes</a>
           </div>
         </div>
 
@@ -129,7 +131,7 @@
           <div class="dados_quarto">
             <h5 class="nome_cidade">Casal Master</h5>
             <p class="texto_quarto">Quarto executivo para um casal de hóspedes.</p>
-            <a href="Quartos.html#quarto_5" class="btn btn-primary button_quarto">Mais detalhes</a>
+            <a href="Quartos.php#quarto_5" class="btn btn-primary button_quarto">Mais detalhes</a>
           </div>
         </div>
 
@@ -137,7 +139,7 @@
           <div class="dados_quarto">
             <h5 class="nome_cidade">Casal Deluxe</h5>
             <p class="texto_quarto">Quarto de luxo para um casal de hóspedes.</p>
-            <a href="Quartos.html#quarto_6" class="btn btn-primary button_quarto">Mais detalhes</a>
+            <a href="Quartos.php#quarto_6" class="btn btn-primary button_quarto">Mais detalhes</a>
           </div>
         </div>
       </div>
@@ -230,4 +232,4 @@
   </footer>
 </body>
 
-</html>
+</>

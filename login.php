@@ -1,3 +1,6 @@
+<?php
+require 'components/register.php'; // Verifique se o caminho está correto
+?>
 <!doctype html>
 <html lang="pt">
 
@@ -9,7 +12,6 @@
 
   <link rel="stylesheet" type="text/css" href="css/inicio.css" />
   <link rel="stylesheet" type="text/css" href="css/login.css" />
-
   <link rel="stylesheet" type="text/css" href="css/responsividade.css" />
 
   <!-- Bootstrap CSS -->
@@ -22,25 +24,18 @@
   <script src='https://kit.fontawesome.com/6c1b2d82eb.js' crossorigin='anonymous'></script>
 
   <script>
-
     function login(caso) {
-
-      if (caso === 0) {
-        document.getElementById("prancheta_registro").style.display = "Block"
-        document.getElementById("prancheta_login").style.display = "None"
-      } else {
-        document.getElementById("prancheta_registro").style.display = "None"
-        document.getElementById("prancheta_login").style.display = "Block"
-      }
+      document.getElementById("prancheta_registro").style.display = caso === 0 ? "block" : "none";
+      document.getElementById("prancheta_login").style.display = caso === 0 ? "none" : "block";
     }
   </script>
 </head>
 
 <body>
-  <!--1 Navbar-->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar_topo navbar_color custom">
     <div class="container-fluid">
-      <a href="index.html"><img src="files/logo.png" height="36"></a>
+      <a href="index.php"><img src="files/logo.png" height="36"></a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,29 +45,28 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active hoverable" aria-current="page" href="Quartos.html">Quartos</a>
+            <a class="nav-link active hoverable" aria-current="page" href="Quartos.php">Quartos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hoverable" href="index.html#institucional">Institucional</a>
+            <a class="nav-link hoverable" href="index.php#institucional">Institucional</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hoverable" href="index.html#rodape">Informações</a>
+            <a class="nav-link hoverable" href="index.php#rodape">Informações</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link hoverable" href="index.html#contato">Contato</a>
+            <a class="nav-link hoverable" href="index.php#contato">Contato</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle hoverable" href="#" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">Nossos serviços</a>
             <ul class="dropdown-menu navbar_color" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="Restaurantes.html">Restaurantes</a></li>
+              <li><a class="dropdown-item" href="Restaurantes.php">Restaurantes</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!--0 navbar-->
 
   <div id="fundo_login"></div>
 
@@ -80,60 +74,58 @@
     <div id="prancheta_login">
       <h1>Vista Bella Mar</h1>
 
-      <form class="caixa-login">
+      <form class="caixa-login" action="login.php" method="POST">
         <div class="mb-3">
-          <label for="inputEmail" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
+          <label for="inputEmailLogin" class="form-label">E-mail</label>
+          <input type="email" class="form-control" name="email" id="inputEmailLogin" required>
         </div>
         <div class="mb-3">
-          <label for="inputPassword" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="inputPassword" required>
+          <label for="inputPasswordLogin" class="form-label">Senha</label>
+          <input type="password" class="form-control" name="password" id="inputPasswordLogin" required>
         </div>
-
         <br>
-
         <a class="btn_login btn btn-primary" onclick="login(0)">Se Registrar</a>
         <button type="submit" class="btn_login btn btn-success">Entrar</button>
       </form>
     </div>
 
-    <div id="prancheta_registro">
-      <h1>Vista bella mar</h1>
+    <div id="prancheta_registro" style="display: none;">
+      <h1>Vista Bella Mar</h1>
 
-      <form class="caixa-login">
+      <form class="caixa-login" action="components/register.php" method="POST"> <!-- Ajuste o caminho se necessário -->
         <div class="mb-3">
-          <label for="inputEmail" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
+          <label for="inputEmailRegistro" class="form-label">E-mail</label>
+          <input type="email" class="form-control" name="email" id="inputEmailRegistro" required>
         </div>
 
         <div class="mb-3">
-          <label for="inputEmail2" class="form-label">Confirmar e-mail</label>
-          <input type="email" class="form-control" id="inputEmail2" aria-describedby="emailHelp" required>
+          <label for="inputEmailConfirm" class="form-label">Confirmar e-mail</label>
+          <input type="email" class="form-control" name="confirm_email" id="inputEmailConfirm" required>
         </div>
 
         <div class="mb-3">
-          <label for="inputPassword" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="inputPassword" maxlength="32" required>
+          <label for="inputPasswordRegistro" class="form-label">Senha</label>
+          <input type="password" class="form-control" name="password" id="inputPasswordRegistro" maxlength="32" required>
         </div>
 
         <div class="mb-3">
-          <label for="inputPassword2" class="form-label">Confirmar Senha</label>
-          <input type="password" class="form-control" id="inputPassword2" maxlength="32" required>
+          <label for="inputPasswordConfirm" class="form-label">Confirmar Senha</label>
+          <input type="password" class="form-control" name="confirm_password" id="inputPasswordConfirm" maxlength="32" required>
         </div>
 
         <div class="mb-3">
-          <label for="inputTelefone" class="form-label">Numero para contato</label>
-          <input type="tel" class="form-control" placeholder="(DDD) 0000-00000" id="inputTelefone" required>
+          <label for="inputTelefone" class="form-label">Número para contato</label>
+          <input type="tel" class="form-control" name="number" placeholder="(DDD) 0000-0000" id="inputTelefone" required>
         </div>
 
         <div class="mb-3">
           <label for="inputEndereco" class="form-label">Endereço</label>
-          <input type="text" class="form-control" id="inputEndereco" required>
+          <input type="text" class="form-control" name="adress" id="inputEndereco" required>
         </div>
 
         <div class="mb-3">
           <label for="inputCEP" class="form-label">CEP</label>
-          <input type="text" class="form-control" id="inputCEP" maxlength="10" pattern="[0-9]{2}.[0-9]{3}-[0-9]{3}"
+          <input type="text" class="form-control" name="cep" id="inputCEP" maxlength="10" pattern="\d{2}\.\d{3}-\d{3}"
             placeholder="00.000-000" required>
 
           <br>
@@ -145,9 +137,8 @@
 
         <br>
 
-        <a class="btn_login btn btn-primary" onclick="login(1)">Entrar</a>
+        <a class="btn_login btn btn-primary" onclick="login(1)">Voltar ao Login</a>
         <button type="submit" class="btn_login btn btn-success">Registrar</button>
-
       </form>
     </div>
   </div>

@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt">
+<?php
+?>
+<!DOCTYPE php>
+<php lang="pt">
 
 <head>
     <meta charset="utf-8">
@@ -26,7 +28,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar_topo navbar_color">
         <div class="container-fluid">
-            <a href="index.html"><img src="files/logo.png" height="36"></a>
+            <a href="index.php"><img src="files/logo.png" height="36"></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,16 +38,16 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="navbar-brand" href="Quartos.html">Quartos</a>
+                        <a class="navbar-brand" href="Quartos.php">Quartos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Institucional.html">Institucional</a>
+                        <a class="nav-link" href="Institucional.php">Institucional</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#rodape">Informações</a>
+                        <a class="nav-link" href="index.php#rodape">Informações</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#contato">Contato</a>
+                        <a class="nav-link" href="index.php#contato">Contato</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -53,12 +55,12 @@
                             Nossos serviços
                         </a>
                         <ul class="dropdown-menu navbar_color" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="Restaurantes.html">Restaurantes</a></li>
+                            <li><a class="dropdown-item" href="Restaurantes.php">Restaurantes</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item nav-login">
-                        <a class="nav-link hoverable" href="login.html">Entrar</a>
+                        <a class="nav-link hoverable" href="login.php">Entrar</a>
                     </li>
                 </ul>
             </div>
