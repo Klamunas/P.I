@@ -4,10 +4,9 @@ $database = 'test';
 $username = 'root';
 $password = '';
 
-$conn = mysqli_connect($servername, $username, $password, $database);
-
-if (!$conn){
-  die('connection falied' . mysqli_connect_error()); 
-}else{
-  echo'your connection has be established whith success';
+try {
+    $pdo = new PDO("mysql:host=$servername;dbname=$database;charset=utf8", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erro na conexão com o banco de dados: " . $e->getMessage());
 }

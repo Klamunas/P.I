@@ -1,6 +1,3 @@
-<?php
-require 'components/register.php'; // Verifique se o caminho está correto
-?>
 <!doctype html>
 <html lang="pt">
 
@@ -74,7 +71,7 @@ require 'components/register.php'; // Verifique se o caminho está correto
     <div id="prancheta_login">
       <h1>Vista Bella Mar</h1>
 
-      <form class="caixa-login" action="login.php" method="POST">
+      <form class="caixa-login" action="components/loginsc.php" method="POST">
         <div class="mb-3">
           <label for="inputEmailLogin" class="form-label">E-mail</label>
           <input type="email" class="form-control" name="email" id="inputEmailLogin" required>

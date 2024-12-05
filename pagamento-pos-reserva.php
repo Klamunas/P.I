@@ -112,9 +112,9 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-success">Efetuar Pagamento</button>
+            <button type="submit" class="btn btn-success"><a href="index.php">Efetuar Pagamento </a></button>
 
-            <a href="#" target="_blank" class="pag-pix">
+            <a href="/components/pix.php" target="_blank" class="pag-pix">
                 <img id="logo_pix" src="files/pagamento-pix.jpg" alt="pix">
             </a>
         </form>
@@ -123,6 +123,59 @@
     <footer id="rodape">
         <img src="files/logo.png" id="icon_rodape">
     </footer>
+    <script>
+  document.querySelector('.pag-pix').addEventListener('click', function (event) {
+    event.preventDefault(); // Impede o comportamento padrão do link
+
+    // Verifica se já existe um QR Code na página para evitar duplicação
+    if (document.querySelector('#qrCodePix')) {
+        return;
+    }
+
+    // Cria a imagem do QR Code
+    const qrCode = document.createElement('img');
+    qrCode.src = 'files/qrcode.png'; // Substitua pelo caminho do seu QR Code
+    qrCode.alt = 'QR Code PIX';
+    qrCode.id = 'qrCodePix'; // Adiciona um ID para facilitar a manipulação
+    qrCode.style.position = 'fixed';
+    qrCode.style.top = '100%';
+    qrCode.style.left = '50%';
+    qrCode.style.transform = 'translate(-50%, -50%)'; // Centraliza a imagem
+    qrCode.style.zIndex = '1000';
+    qrCode.style.background = 'white';
+    qrCode.style.padding = '20px';
+    qrCode.style.border = '1px solid #ccc';
+    qrCode.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.5)';
+
+    // Cria o botão de fechamento
+    const closeButton = document.createElement('button');
+    closeButton.innerText = 'Fechar';
+    closeButton.id = 'closeButtonPix'; // Adiciona um ID para facilitar a manipulação
+    closeButton.style.position = 'fixed';
+    closeButton.style.top = 'calc(50% + 100px)'; // Ajusta a posição do botão
+    closeButton.style.left = '50%';
+    closeButton.style.transform = 'translateX(-50%)';
+    closeButton.style.zIndex = '1001';
+    closeButton.style.background = '#ff5e57';
+    closeButton.style.color = 'white';
+    closeButton.style.border = 'none';
+    closeButton.style.padding = '10px 20px';
+    closeButton.style.borderRadius = '5px';
+    closeButton.style.cursor = 'pointer';
+
+    // Adiciona evento de clique ao botão para remover os elementos
+    closeButton.addEventListener('click', function () {
+        qrCode.remove();
+        closeButton.remove();
+    });
+
+    // Adiciona os elementos ao corpo do documento
+    document.body.appendChild(qrCode);
+    document.body.appendChild(closeButton);
+});
+
+</script>
+
 </body>
 
 </html>

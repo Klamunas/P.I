@@ -1,4 +1,5 @@
 <?php
+  session_start();
 ?>
 <!doctype php>
 <php lang="pt">
@@ -59,7 +60,13 @@
           </li>
 
           <li class="nav-item nav-login">
-            <a class="nav-link hoverable" href="login.php">Entrar</a>
+            <?php
+              if(!isset($_SESSION['user_id'])|| $_SESSION['user_id'] == null || empty($_SESSION['user_id'])) {
+                echo "<a class='nav-link hoverable' href='login.php'>Entrar</a>";
+              } else {
+                echo "<a class='nav-link hoverable' onclick='logout()'>Sair</a>";
+              }
+            ?>
           </li>
         </ul>
       </div>
@@ -230,6 +237,10 @@
       <img src="files/logo.png" id="icon_rodape">
     </center>
   </footer>
-</body>
 
-</>
+  <script>
+    function logout() {
+      window.location.href = './components/logout.php';
+    }
+  </script>
+</body>
